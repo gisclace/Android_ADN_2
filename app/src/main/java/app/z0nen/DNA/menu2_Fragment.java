@@ -9,6 +9,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Random;
 
 
@@ -20,7 +22,7 @@ public class menu2_Fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootview = inflater.inflate(R.layout.menu2_layout, container, false);
+        rootview = inflater.inflate(R.layout.adn_convert, container, false);
         Button btn = (Button) rootview.findViewById(R.id.Gadn);
         Button btn2 = (Button) rootview.findViewById(R.id.convert);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +31,12 @@ public class menu2_Fragment extends Fragment {
 
                 TextView text_Random = (TextView) rootview.findViewById(R.id.adn);
                 TextView input = (TextView) rootview.findViewById(R.id.input);
+                TextView adn = (TextView) rootview.findViewById(R.id.adn);
+                final String inTxt = input.getText().toString();
+                if (inTxt.equals("")) {
+                    Toast.makeText(rootview.getContext(), "Vous devez indiquer le nombre de caractères à générer.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 text_Random.setText(getRandomString());
             }
         });

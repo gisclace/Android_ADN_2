@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Afin de convertir une chaine ADN, vous pouvez en générer une aléatoirement en entrant le nombre de caractères puis en cliquant sur générer Adn, ou vous pouvez directement la saisir en utilisant les boutons A, T, G et C"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/input"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Générer ADN"
+            android:id="@+id/Gadn"
+            android:layout_alignTop="@+id/input"
+            android:layout_toRightOf="@+id/input"
+            android:layout_toEndOf="@+id/input" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:id="@+id/button_A"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:id="@+id/button_T"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/button_A"
+            android:layout_toEndOf="@+id/button_A" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:id="@+id/button_G"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/button_T"
+            android:layout_toEndOf="@+id/button_T" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:id="@+id/button_C"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/button_G"
+            android:layout_toEndOf="@+id/button_G" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/adn"
+        android:layout_below="@+id/button_A"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/Gadn"
+        android:layout_alignEnd="@+id/Gadn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertir la chaine ADN en ARMn"
+        android:id="@+id/convert"
+        android:layout_below="@+id/adn"
+        android:layout_alignLeft="@+id/button_G"
+        android:layout_alignStart="@+id/button_G"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/arn"
+        android:layout_below="@+id/convert"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/Gadn"
+        android:layout_alignEnd="@+id/Gadn" />
+
+</LinearLayout>
+    </ScrollView>
