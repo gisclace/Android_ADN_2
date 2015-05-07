@@ -85,12 +85,13 @@
             android:layout_toEndOf="@+id/button_G" />
     </RelativeLayout>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/adn"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_below="@+id/button_A"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -107,10 +108,11 @@
         android:layout_alignStart="@+id/button_G"
         android:layout_gravity="center_horizontal" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:ems="10"
         android:id="@+id/arn"
         android:layout_below="@+id/convert"
