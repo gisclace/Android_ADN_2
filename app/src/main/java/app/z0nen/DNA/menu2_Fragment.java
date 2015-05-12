@@ -44,6 +44,7 @@ public class menu2_Fragment extends Fragment {
         Button c = (Button) rootview.findViewById(R.id.button_C);
         Button g = (Button) rootview.findViewById(R.id.button_G);
         Button t = (Button) rootview.findViewById(R.id.button_T);
+        Button o = (Button) rootview.findViewById(R.id.button_0);
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +79,15 @@ public class menu2_Fragment extends Fragment {
                 TextView adn = (TextView) rootview.findViewById(R.id.adn);
                 String source = adn.getText ().toString();
                 adn.setText(source+"T");
+            }
+        });
+        o.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                TextView adn = (TextView) rootview.findViewById(R.id.adn);
+                String source = adn.getText ().toString();
+                adn.setText("");
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {

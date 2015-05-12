@@ -83,6 +83,14 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/button_G"
             android:layout_toEndOf="@+id/button_G" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ø"
+            android:id="@+id/button_0"
+            android:layout_alignBottom="@+id/button_C"
+            android:layout_toEndOf="@+id/button_C" />
     </RelativeLayout>
 
     <TextView
